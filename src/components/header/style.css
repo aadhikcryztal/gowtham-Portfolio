@@ -1,0 +1,128 @@
+:root {
+  --primary-background: rgb(255, 248, 242);
+  --primary-fontcolor: #454545;
+  --divider-color: rgba(123, 123, 123, 0.319);
+  --download-text-color: rgb(137, 94, 42);
+}
+
+.header-container {
+  width: 100%;
+  min-height: 400px;
+  background-color: var(--primary-background);
+  color: var(--primary-fontcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.header-container .image-section {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container * {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-container .image-section .blob-container {
+  width: 100%;
+}
+
+.header-container .image-section .blob-container img {
+  width: 90%;
+  max-width: 280px;
+  height: auto;
+  margin: auto;
+  border-radius: 30%;
+}
+
+.header-container .user-context {
+  width: 65%;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.user-context a {
+  text-decoration: none;
+  color: var(--download-text-color);
+}
+
+.header-container .profile-details .user-name {
+  font-size: 42px;
+}
+
+.header-container .profile-details .user-role {
+  font-size: 24px;
+  letter-spacing: 0.4px;
+}
+
+.header-container .divider {
+  width: 90%;
+  height: 2px;
+  background-color: var(--divider-color);
+}
+
+.header-container .bio-context {
+  width: 90%;
+  text-align: justify;
+  line-height: 24px;
+}
+
+
+@media only screen and (max-width: 920px) {
+  .header-container * {
+    width: 100% !important;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 5% 0px;
+  }
+  .header-container > * {
+    padding: 0 5%;
+  }
+  .header-container .profile-details * {
+    align-items: center;
+  }
+  .header-container .profile-details {
+    order: -2;
+  }
+  .header-container .user-context a {
+    order: -1;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-container {
+    padding-top: 0%;
+    padding-bottom: 10%;
+  }
+  .header-container .image-section {
+    padding: 0 0%;
+  }
+  .header-container .image-section * {
+    min-width: 100%;
+  }
+  .header-container .image-section img {
+    border-radius: 0px !important;
+    max-height: 300px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  .header-container .profile-details .user-name {
+    font-size: 32px;
+  }
+  .header-container .profile-details .user-role {
+    font-size: 18px;
+  }
+  .header-container .bio-context {
+    font-size: 14px;
+  }
+}

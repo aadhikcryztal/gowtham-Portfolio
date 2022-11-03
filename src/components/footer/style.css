@@ -1,0 +1,83 @@
+:root {
+  --primary-background: rgb(255, 248, 242);
+  --primary-fontcolor: #454545;
+}
+
+.footer-container {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 3vh;
+  background-color: var(--primary-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: var(--primary-fontcolor);
+}
+
+.footer-container *{
+  display: flex;
+}
+
+.footer-container .content {
+  width: 80%;
+  justify-content: space-between;
+}
+.footer-container .profile-details {
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+.footer-container .profile-details .user-name {
+  font-size: 42px;
+}
+
+.footer-container .profile-details .user-role {
+  font-size: 24px;
+  letter-spacing: 0.4px;
+}
+
+.footer-container .contact-details {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 20px;
+}
+.footer-container .contact {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5px;
+}
+.footer-container .contact-details .social {
+  display: flex;
+  gap: 30px;
+}
+.footer-container .contact-details .social i {
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container .content {
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-container .profile-details .user-name {
+    font-size: 24px;
+  }
+
+  .footer-container .profile-details .user-role {
+    font-size: 16px;
+  }
+
+  .footer-container .contact-details {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .footer-container .contact-details .contact {
+    align-items: flex-start;
+  }
+}

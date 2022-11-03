@@ -1,0 +1,137 @@
+.edu-exp-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+.edu-exp-container .content {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.edu-exp-container .content:nth-child(2) {
+  margin-top: 30px;
+}
+
+.edu-exp-container .title {
+  width: 20%;
+  width: max-content;
+  font-size: 32px;
+}
+
+.edu-exp-container .card {
+  width: 100%;
+  max-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  border-bottom: 1px solid rgba(233, 233, 233, 0.842);
+  padding-bottom: 20px;
+}
+
+.edu-exp-container .section {
+  width: 100%;
+}
+
+.edu-exp-container .card .section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.edu-exp-container .card .stream-median {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.edu-exp-container .card .stream {
+  font-size: 20px;
+  letter-spacing: 0.8;
+}
+
+.edu-exp-container .card .median {
+  font-size: 16px;
+  color: rgb(179, 179, 179);
+}
+
+.edu-exp-container .card .duration {
+  color: rgb(179, 179, 179);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-exp-container .card .duration span {
+  letter-spacing: 0.6px;
+  font-size: 14px;
+}
+
+.edu-exp-container
+  .content:nth-child(2)
+  .more-details-section
+  .link {
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+  color: rgb(255, 207, 94);
+}
+
+.edu-exp-container
+  .content:nth-child(2)
+  .more-details-section
+  .context {
+  height: max-content;
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 14px;
+  color: rgb(179, 179, 179);
+  transition: font-size 0.1s ease-out;
+}
+
+.hide {
+  font-size: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .edu-exp-container {
+    width: 100vw;
+    padding: 20px;
+  }
+
+  .edu-exp-container .content {
+    width: 100%;
+  }
+
+  .edu-exp-container .title {
+    font-size: 24px;
+  }
+
+  .edu-exp-container .card .section {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .edu-exp-container .card {
+    max-width: 100%;
+  }
+
+  .edu-exp-container
+    .content:nth-child(2)
+    .more-details-section
+    .context {
+    line-height: 21px;
+  }
+}

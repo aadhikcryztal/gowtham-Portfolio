@@ -1,0 +1,16 @@
+:root{
+  --primary-gradient :  linear-gradient(
+    90deg,
+    rgb(170, 91, 55) 0%,
+    rgb(207, 171, 25) 100%
+  );
+}
+
+.underline {
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 3px;
+}
+
+
+/* verified */
