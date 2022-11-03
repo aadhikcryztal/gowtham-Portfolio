@@ -102,6 +102,20 @@
 .hide {
   font-size: 0px;
 }
+@media only screen and (max-width: 1280px) {
+  .edu-exp-container .content .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .edu-exp-container {
+    padding: 5%;
+  }
+  .edu-exp-container .content {
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .edu-exp-container {
@@ -133,5 +147,13 @@
     .more-details-section
     .context {
     line-height: 21px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .edu-exp-container .card .stream {
+    font-size: 16px;
+  }
+  .edu-exp-container .card .median {
+    font-size: 14px;
   }
 }
