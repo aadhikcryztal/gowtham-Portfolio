@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import uuid from "react-uuid";
 import { Underline } from "../design";
-import Project from "./../../assets/project.svg";
+import Project from "./../../assets/project.jpeg";
 
 import "./style.css";
 
@@ -26,7 +26,7 @@ class Mobile extends Component {
                     key={uuid()}
                     className="portfolio-card"
                   >
-                    <img src={Project} />
+                    <img src={Project} alt="project" />
                   </div>
                 </a>
               );

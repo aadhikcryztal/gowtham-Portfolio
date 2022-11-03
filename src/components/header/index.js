@@ -31,7 +31,7 @@ const Header = () => {
           like Aldus PageMaker including versions of Lorem
           Ipsum.
         </p>
-        <a href="">Download Resume</a>
+        <a href="#">Download Resume</a>
       </div>
     </div>
   );
