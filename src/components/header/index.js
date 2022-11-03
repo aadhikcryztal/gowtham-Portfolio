@@ -31,7 +31,9 @@ const Header = () => {
           like Aldus PageMaker including versions of Lorem
           Ipsum.
         </p>
-        <a href="#">Download Resume</a>
+        <a href="http://gowthamaadhik.netlify.com">
+          Download Resume
+        </a>
       </div>
     </div>
   );
