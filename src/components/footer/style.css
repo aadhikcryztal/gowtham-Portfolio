@@ -6,12 +6,12 @@
 .footer-container {
   width: 100%;
   min-height: 400px;
-  margin-top: 3vh;
+  margin-top: 2vh;
   background-color: var(--primary-background);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 50px 0px;
   color: var(--primary-fontcolor);
 }
 
@@ -55,6 +55,15 @@
 }
 .footer-container .contact-details .social i {
   font-size: 24px;
+}
+@media only screen and (max-width: 1280px) {
+  .footer-container{
+    min-height: auto;
+    padding: 10% 5%;
+  }
+  .footer-container .content{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {

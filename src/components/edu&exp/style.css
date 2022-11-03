@@ -1,12 +1,14 @@
 .edu-exp-container {
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
+  padding: 50px 0px;
+  
 }
+
 .edu-exp-container .content {
   height: 80%;
   width: 80%;
@@ -57,11 +59,14 @@
 .edu-exp-container .card .stream {
   font-size: 20px;
   letter-spacing: 0.8;
+  text-align: left;
 }
 
 .edu-exp-container .card .median {
   font-size: 16px;
   color: rgb(179, 179, 179);
+  text-align: left;
+  
 }
 
 .edu-exp-container .card .duration {
@@ -78,7 +83,7 @@
 }
 
 .edu-exp-container
-  .content:nth-child(2)
+  .content:nth-child(1)
   .more-details-section
   .link {
   display: flex;
@@ -88,7 +93,7 @@
 }
 
 .edu-exp-container
-  .content:nth-child(2)
+  .content:nth-child(1)
   .more-details-section
   .context {
   height: max-content;
@@ -108,7 +113,7 @@
     max-width: 100%;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 920px) {
   .edu-exp-container {
     padding: 5%;
   }
