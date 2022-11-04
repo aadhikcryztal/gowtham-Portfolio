@@ -98,12 +98,20 @@ class Desktop extends Component {
             <div className="cards-container">
               {this.state.activeCards.map((card) => {
                 return (
-                  <a href={card.url} target="_blank">
+                  <a
+                    href={card.url}
+                    target="_blank"
+                    rel="no refferer"
+                  >
                     <div
                       key={uuid()}
                       className="portfolio-card"
                     >
-                      <img src={card.name} alt="project" />
+                      <img
+                        src={card.name}
+                        alt="project"
+                        rel="no refferer"
+                      />
                     </div>
                   </a>
                 )

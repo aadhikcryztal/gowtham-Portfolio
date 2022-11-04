@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import uuid from "react-uuid";
-import { Underline } from "../design";
-import Project from "./../../assets/project.jpeg";
+import { Underline } from "../design"
 
 import "./style.css";
 
@@ -32,7 +31,11 @@ class Mobile extends Component {
                     key={uuid()}
                     className="portfolio-card"
                   >
-                    <img src={card.name} alt="project" />
+                    <img
+                      src={card.name}
+                      alt="project"
+                      rel="no refferer"
+                    />
                   </div>
                 </a>
               )
