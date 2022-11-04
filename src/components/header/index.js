@@ -1,5 +1,6 @@
 import React from "react";
 import Profile from "./../../assets/profile.jpg";
+import Resume from "./../../assets/Resume.pdf"
 import "./style.css";
 
 const Header = () => {
@@ -28,12 +29,12 @@ const Header = () => {
           available on famous platforms like dribble,
           Behance, etc.
         </p>
-        <a href="http://gowthamaadhik.netlify.com">
+        <a href={Resume} download>
           Download Resume
         </a>
       </div>
     </div>
-  );
+  )
 };
 
 export default Header;
