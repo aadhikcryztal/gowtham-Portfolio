@@ -26,16 +26,16 @@ class Mobile extends Component {
           <div className="cards-container">
             {this.state.cards.map((card, index) => {
               return (
-                <a href={card.url} target="_blank">
+                <a
+                  href={card.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div
                     key={uuid()}
                     className="portfolio-card"
                   >
-                    <img
-                      src={card.name}
-                      alt="project"
-                      rel="noopener noreferrer"
-                    />
+                    <img src={card.name} alt="project" />
                   </div>
                 </a>
               )
