@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import uuid from "react-uuid";
-import { Underline } from "../design";
-import Project from "./../../assets/project.jpeg";
-import "./style.css";
+import { Underline } from "../design"
+import "./style.css"
 
 class Desktop extends Component {
   state = {
@@ -10,20 +9,26 @@ class Desktop extends Component {
     lastActiveIndex: 0,
     activeCards: [],
     countRestrictions: 3,
-  };
+  }
 
-  componentDidMount() {
-    let cards = [...this.state.cards];
-    let countRestrictions = 3;
-    console.log(window.innerWidth);
-    if (window.innerWidth <= 1280) {
-      countRestrictions = 2;
-    }
-    this.setState({
-      activeCards: cards.splice(0, countRestrictions),
-      lastActiveIndex: countRestrictions,
-      countRestrictions: countRestrictions,
-    });
+  componentDidMount(props) {
+    this.setState(
+      {
+        cards: this.props.data,
+      },
+      () => {
+        let cards = [...this.state.cards]
+        let countRestrictions = 3
+        if (window.innerWidth <= 1280) {
+          countRestrictions = 2
+        }
+        this.setState({
+          activeCards: cards.splice(0, countRestrictions),
+          lastActiveIndex: countRestrictions,
+          countRestrictions: countRestrictions,
+        })
+      }
+    )
   }
 
   handleRightButton = () => {
@@ -31,52 +36,55 @@ class Desktop extends Component {
       lastActiveIndex,
       cards: [...cards],
       countRestrictions,
-    } = this.state;
+    } = this.state
 
-    let activeCards = [];
+    let activeCards = []
     if (
       lastActiveIndex + countRestrictions >=
       this.state.cards.length
     ) {
-      activeCards = cards.splice(lastActiveIndex);
-      lastActiveIndex = this.state.cards.length;
+      activeCards = cards.splice(lastActiveIndex)
+      lastActiveIndex = this.state.cards.length
     } else {
       activeCards = cards.splice(
         lastActiveIndex,
         countRestrictions
-      );
-      lastActiveIndex += countRestrictions;
+      )
+      lastActiveIndex += countRestrictions
     }
     this.setState({
       lastActiveIndex: lastActiveIndex,
       activeCards: activeCards,
-    });
-  };
+    })
+  }
 
   handleLeftButton = () => {
     let {
       lastActiveIndex,
       cards: [...cards],
       countRestrictions,
-    } = this.state;
+    } = this.state
 
-    let activeCards = [];
+    let activeCards = []
     if (lastActiveIndex === this.state.cards.length) {
+      console.log("helloo...")
       lastActiveIndex =
         lastActiveIndex -
-        (lastActiveIndex % countRestrictions);
+        (lastActiveIndex % countRestrictions === 0
+          ? countRestrictions
+          : lastActiveIndex % countRestrictions)
     } else {
-      lastActiveIndex -= countRestrictions;
+      lastActiveIndex -= countRestrictions
     }
     activeCards = cards.splice(
       lastActiveIndex - countRestrictions,
       countRestrictions
-    );
+    )
     this.setState({
       lastActiveIndex: lastActiveIndex,
       activeCards: activeCards,
-    });
-  };
+    })
+  }
 
   render() {
     return (
@@ -88,15 +96,17 @@ class Desktop extends Component {
           </div>
           <div className="cards-detail">
             <div className="cards-container">
-              {this.state.activeCards.map((card, index) => {
+              {this.state.activeCards.map((card) => {
                 return (
-                  <div
-                    key={uuid()}
-                    className="portfolio-card"
-                  >
-                    <img src={Project} alt="project" />
-                  </div>
-                );
+                  <a href={card.url} target="_blank">
+                    <div
+                      key={uuid()}
+                      className="portfolio-card"
+                    >
+                      <img src={card.name} alt="project" />
+                    </div>
+                  </a>
+                )
               })}
             </div>
             <div className="active-cards-details">
@@ -131,7 +141,7 @@ class Desktop extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 

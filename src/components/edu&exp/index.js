@@ -31,16 +31,16 @@ class EduExp extends Component {
         showContext: false,
       },
     ],
-  };
+  }
 
   handleContext = (index) => {
-    let experience = [...this.state.experience];
+    let experience = [...this.state.experience]
     experience[index].showContext =
-      !experience[index].showContext;
+      !experience[index].showContext
     this.setState({
       experience,
-    });
-  };
+    })
+  }
   render() {
     return (
       <div className="edu-exp-container">
@@ -66,51 +66,50 @@ class EduExp extends Component {
                     <span>{experience.duration}</span>
                   </p>
                 </div>
-                <div className="more-details-section">
-                  {!experience.showContext ? (
-                    <p
-                      className="link"
-                      onClick={() =>
-                        this.handleContext(index)
-                      }
-                    >
-                      <span>More details </span>
-                      <i class="bi bi-chevron-down"></i>
-                    </p>
-                  ) : (
-                    <p
-                      className="link"
-                      onClick={() =>
-                        this.handleContext(index)
-                      }
-                    >
-                      <span>Less details </span>
-                      <i class="bi bi-chevron-up"></i>
-                    </p>
-                  )}
+                {/* <div className="more-details-section"> */}
+                {/* {!experience.showContext ? (
                   <p
-                    className={
-                      experience.showContext
-                        ? "context"
-                        : "hide"
+                    className="link"
+                    onClick={() =>
+                      this.handleContext(index)
                     }
                   >
-                    Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard
-                    dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type
-                    and scrambled it to make a type specimen
-                    book. It has survived not only five
-                    centuries, but also the leap into
-                    electronic typesetting, remaining
-                    essentially unchanged. It was
-                    popularised in the 1960s with the
-                    release of Letraset sheets containing
-                    Lorem Ipsum passages, and more recently
-                    with desktop publishing software.
+                    <span>More details </span>
+                    <i class="bi bi-chevron-down"></i>
                   </p>
-                </div>
+                ) : (
+                  <p
+                    className="link"
+                    onClick={() =>
+                      this.handleContext(index)
+                    }
+                  >
+                    <span>Less details </span>
+                    <i class="bi bi-chevron-up"></i>
+                  </p>
+                )}
+                <p
+                  className={
+                    experience.showContext
+                      ? "context"
+                      : "hide"
+                  }
+                >
+                  Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard
+                  dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and
+                  scrambled it to make a type specimen book.
+                  It has survived not only five centuries,
+                  but also the leap into electronic
+                  typesetting, remaining essentially
+                  unchanged. It was popularised in the 1960s
+                  with the release of Letraset sheets
+                  containing Lorem Ipsum passages, and more
+                  recently with desktop publishing software.
+                </p> */}
+                {/* </div> */}
               </div>
             )
           )}
@@ -140,8 +139,8 @@ class EduExp extends Component {
           ))}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default EduExp;
+export default EduExp

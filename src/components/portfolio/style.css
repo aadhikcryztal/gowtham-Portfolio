@@ -35,25 +35,48 @@
   font-size: 16px;
 }
 
-.portfolio-card {
+.desktop-container .cards-container a {
+  min-height: 100% !important;
+  max-height: 100% !important;
+  width: 33%;
+  margin-right: 30px;
+}
+.desktop-container .cards-container a .portfolio-card{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.desktop-container .cards-container a .portfolio-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.desktop-container .cards-container a:last-child{
+  margin-right: 0px;
+}
+
+.mobile-container .portfolio-card {
   display: flex;
   flex-basis: 250px;
   flex-grow: 1;
   flex-shrink: 1;
   max-width: 33%;
+  margin-right: 30px;
+  height: auto;
   background-color: rgba(250, 235, 215, 0.544);
   color: white;
   font-size: 32px;
-  margin-right: 30px;
-  border-radius: 12px;
   overflow: hidden;
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
 }
+
 .portfolio-card img {
   width: 100%;
   height: auto;
+  border-radius: 12px;
 }
 
 .portfolio-card:last-child {
