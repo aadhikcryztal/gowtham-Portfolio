@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import uuid from "react-uuid";
+import React, { Component } from "react"
+import uuid from "react-uuid"
 import { Underline } from "../design"
 import "./style.css"
 
@@ -101,7 +101,7 @@ class Desktop extends Component {
                   <a
                     href={card.url}
                     target="_blank"
-                    rel="no refferer"
+                    rel="noopener noreferrer"
                   >
                     <div
                       key={uuid()}
@@ -153,4 +153,4 @@ class Desktop extends Component {
   }
 }
 
-export default Desktop;
+export default Desktop

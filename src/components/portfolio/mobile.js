@@ -34,7 +34,7 @@ class Mobile extends Component {
                     <img
                       src={card.name}
                       alt="project"
-                      rel="no refferer"
+                      rel="noopener noreferrer"
                     />
                   </div>
                 </a>
