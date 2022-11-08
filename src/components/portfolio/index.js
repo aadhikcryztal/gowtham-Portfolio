@@ -17,11 +17,16 @@ import Project13 from "./../../assets/project 13.jpeg";
 import Project14 from "./../../assets/project 14.jpeg";
 import Project15 from "./../../assets/project 15.jpeg";
 import Project16 from "./../../assets/project 16.jpeg"
+import Project17 from "./../../assets/project 17.jpeg"
 
 const data = [
   {
     name: Project16,
     url: "https://www.figma.com/proto/fFlS15iYz9urPHk3oimx8w/Facebook-lite?page-id=0%3A1&node-id=1%3A2&viewport=-678%2C624%2C1.21&scaling=scale-down&starting-point-node-id=1%3A2&show-proto-sidebar=1",
+  },
+  {
+    name: Project17,
+    url: "https://www.figma.com/proto/h4L70cphGu4EJQQYGQkKtt/Hotel-Booking-App?page-id=0%3A1&node-id=1%3A6&viewport=890%2C313%2C0.35&scaling=scale-down&starting-point-node-id=1%3A6&show-proto-sidebar=1",
   },
   {
     name: Project,
