@@ -16,8 +16,13 @@ import Project12 from "./../../assets/project 12.jpeg";
 import Project13 from "./../../assets/project 13.jpeg";
 import Project14 from "./../../assets/project 14.jpeg";
 import Project15 from "./../../assets/project 15.jpeg";
+import Project16 from "./../../assets/project 16.jpeg"
 
 const data = [
+  {
+    name: Project16,
+    url: "https://www.figma.com/proto/fFlS15iYz9urPHk3oimx8w/Facebook-lite?page-id=0%3A1&node-id=1%3A2&viewport=-678%2C624%2C1.21&scaling=scale-down&starting-point-node-id=1%3A2&show-proto-sidebar=1",
+  },
   {
     name: Project,
     url: "https://www.figma.com/proto/79CSzFF5LWNMD07o3vBAUw/Chat-App?page-id=0%3A1&node-id=1%3A24&viewport=1093%2C-57%2C0.61&scaling=min-zoom&starting-point-node-id=1%3A24",
@@ -78,7 +83,7 @@ const data = [
     name: Project15,
     url: "https://www.figma.com/proto/qemeuEwDiHMPmSwC465A1g/variants?page-id=0%3A1&node-id=1%3A2&viewport=218%2C240%2C0.33&scaling=min-zoom&starting-point-node-id=1%3A2",
   },
-];
+]
 
 const Portfolio = () => {
   const [isMobile, setisMobile] = useState(false);
